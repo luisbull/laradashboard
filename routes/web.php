@@ -61,3 +61,5 @@ Route::view('nosotros', 'nosotros')->name('nosotros');
 
 Route::get('contact', [ContactController::class, 'index'])->name('contact.index');
 Route::post('contact.store', [ContactController::class, 'store'])->name('contact.store');
+
+Route::get('welcome', [HomeController::class, 'welcome'])->name('welcome');
