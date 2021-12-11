@@ -49,7 +49,7 @@ $alert = 'alert';
         </x-alert>
 
         {{-- Components Anonim --}}
-        <x-alert2 color="blue" class="mb-4">
+        <x-alert2 :color="$color" class="mb-4">
             <x-slot name="title">
                 Titulo de prueba
             </x-slot>
@@ -58,7 +58,7 @@ $alert = 'alert';
             architecto veritatis!
         </x-alert2>
 
-        <x-alert2>
+        <x-alert2 class="mx-6">
         </x-alert2>
         {{-- END Components Anonim --}}
 
