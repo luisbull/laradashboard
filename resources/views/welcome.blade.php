@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,14 +11,68 @@
     <title>Tailwind</title>
 
     <style>
-        .container{
+        /* .container{
             background-color: red;
-        }
+        } */
+
     </style>
 </head>
+
+@php
+$color = 'green';
+$alert = 'alert';
+@endphp
+
 <body>
 
     <div class="container mx-auto">
+        <x-alert :color="$color" class="mb-8">
+            <x-slot name="title">
+                Title 1
+            </x-slot>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus qui quas nisi, nulla, odio eos minus nam
+            ullam tempore alias itaque perspiciatis amet asperiores, architecto dicta? Dignissimos neque dicta iste.
+        </x-alert>
+
+        <x-alert color="orange">
+            <x-slot name="title">
+                Title 2
+            </x-slot>
+            Hello world
+        </x-alert>
+
+        <x-alert color="violet">
+            <x-slot name="title">
+                Title 3
+            </x-slot>
+            Hello world 3
+        </x-alert>
+
+        {{-- Components Anonim --}}
+        <x-alert2 color="blue" class="mb-4">
+            <x-slot name="title">
+                Titulo de prueba
+            </x-slot>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem at unde consectetur non exercitationem.
+            Quis dolore dolorum laboriosam doloribus ut accusamus labore, culpa odit esse officia nihil voluptates
+            architecto veritatis!
+        </x-alert2>
+
+        <x-alert2>
+        </x-alert2>
+        {{-- END Components Anonim --}}
+
+        {{-- Components Dynamic --}}
+        <x-dynamic-component :component="$alert" :color="$color">
+            <x-slot name="title">
+            Title 1
+            </x-slot>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus qui quas nisi, nulla, odio eos minus nam
+            ullam tempore alias itaque perspiciatis amet asperiores, architecto dicta? Dignissimos neque dicta iste.
+        </x-dynamic-component>
+        {{-- ENDComponents Dynamic --}}
+
+        <br>
         {{-- <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 "> --}}
         <div class="grid grid-cols-4 grid-rows-3 gap-4 ">
             <h1 class="bg-blue-200 sm:col-span-2 md:col-span-3 lg:col-span-4">1 Hola mundo</h1>
@@ -53,6 +108,7 @@
             <div class="bg-blue-900">9</div>
         </div>
     </div>
-    
+
 </body>
+
 </html>
