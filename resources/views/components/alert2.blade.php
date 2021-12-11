@@ -1,5 +1,5 @@
-@props(['color' => 'blue', 'title' => 'titulo por defecto'])
-<div role="alert" {{$attributes}}>
+@props(['color' => 'blue', 'title' => 'titulo por defecto']) {{-- declare default values if they were NOT assigned in blade file --}}
+<div role="alert" {{$attributes}}> {{-- {{$attributes allow to read more than one attribute assigned in blade file. this case mb-4}} --}}
     <div class="bg-{{$color}}-500 text-white font-bold rounded-t px-4 py-2">
         {{$title}}
     </div>
