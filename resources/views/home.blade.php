@@ -1,7 +1,2 @@
-@extends('layouts.plantilla')
-
-@section('title', 'Home')
-
-@section('content')
-  <h1>Bienvenido a la pagina principal</h1>
-@endsection
+<x-app-layout>    
+</x-app-layout>

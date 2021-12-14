@@ -63,3 +63,5 @@ Route::get('contact', [ContactController::class, 'index'])->name('contact.index'
 Route::post('contact.store', [ContactController::class, 'store'])->name('contact.store');
 
 Route::get('welcome', [HomeController::class, 'welcome'])->name('welcome');
+Route::get('home2', [HomeController::class, 'home2'])->name('home2');
+Route::get('tailwind', [HomeController::class, 'tailwind'])->name('tailwind');
