@@ -19,6 +19,15 @@ class HomeController extends Controller
     {
         return view('welcome');
     }
+
+    public function home2()
+    {
+        return view('home2');
+    }
+    public function tailwind()
+    {
+        return view('tailwind');
+    }
     ////////////////////////////////////////
     // END DELETE after learning TAILWIND //
     ////////////////////////////////////////
